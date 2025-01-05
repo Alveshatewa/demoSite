@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="assets/images/Logo.png">
 
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
     <script src="script.js" defer></script>
     
@@ -33,6 +35,7 @@
                     <li><a href="#inicio"> Inicio </a></li>
                     <li><a href="#sobre"> Sobre </a></li>
                     <li><a href="#servicos"> Servicos</a></li>
+                    <li><a href="#parceiros"> Parceiros</a></li>
                     <li><a href="#contactos"> Contactos </a></li>
                 </ul>
 
@@ -52,9 +55,30 @@
 
             <section id="inicio">
                 <h1 id="boasVindas"></h1>
+                
             </section>
     
 
+        </div>
+
+        <div class="textoReflexao">
+            <div class="texto">
+                <blockquote>
+                    “Seu trabalho vai 
+                    ocupar uma grande 
+                    parte da sua vida, e a 
+                    única maneira de estar 
+                    verdadeiramente 
+                    satisfeito é fazendo 
+                    aquilo que você acredita 
+                    ser um ótimo trabalho.”
+                </blockquote>
+            </div>
+            <div class="autor">
+                <h3> <i>Steve Jobs</i> </h3>
+            </div>
+            
+            
         </div>
 
     </header>
@@ -129,12 +153,13 @@
                 A sua sigla <strong> Soluções e Oportunidades</strong> representam duas coisas específicas: 
                 <br>  
                 <ol>
-                    <li>Trazer Soluções aos seus clientes de maneiras que possam experimentar da qualidade
+                    <li data-aos="fade-left">
+                        <strong>Trazer Soluções</strong> aos seus clientes de maneiras que possam experimentar da qualidade
                         dos servíços prestados pela empresa, proporcionando <strong> conforto e satifação</strong>
                         aos seus clientes.
 
                     </li>
-                    <li>
+                    <li data-aos="fade-left">
                         <strong> Oportunidades</strong> de aprender com os seus clientes e por sua vez, os seus 
                         clientes com a empresa, além de trazer ao mercado um tipo de serviço que há muito não se
                         vê em <strong> Angola,</strong> <i> qualidade, conforto e segurança</i> e o mais importante, 
@@ -150,52 +175,57 @@
 
         <section id="servicos" class="servicos">
 
-            <h2>Nossos Servicos</h2>
-
+            <h2 data-aos="fade-up">Nossos Servicos</h2>
+            
             <ul>
-                <li class="item-service">
-                    <h3><strong>Estufagem</strong></h3>
-                    <p>
+                <li class="item-service" data-aos="fade-up">
+                    <h3><i class="fas fa-couch"></i><strong>  Estufagem</strong></h3>
+                    <p class="service-description" >
                        Respondendo a necessidade de ter um sofá novinho e com qualidade, 
                        A KamaCar oferece-lhe os melhores produtos e serviço de estufagem 
                        que possa imaginar, tudo isso por preços super acessíveis e com 
                        grande qualidade.
                     </p>
+                    <button onclick="toggleDescription(this)">▼</button>
 
                 </li>
-                <li class="item-service">
-                    <h3><strong>Remodelação</strong></h3>
-                    <p>
+                <li class="item-service" data-aos="fade-up">
+                    <h3><i class="fas fa-tools"></i><strong>  Remodelação</strong></h3>
+                    <p class="service-description" >
                         Seu sofá, cadeira, bancos de carro e mesa estão danificados? 
                         A KamaCar resolve isso para sí. Requalificamos os seus imóveis
                         deixando-os como novo, trazendo de novo a sua beleza e conforto,
                         primando pela sua satisfação.
                     </p>
+                    <button onclick="toggleDescription(this)">▼</button>
                 </li>
-                <li class="item-service">
-                    <h3><strong>Produção</strong></h3>
-                    <p>
+                <li class="item-service" data-aos="fade-up">
+                    <h3><i class="fas fa-hammer"></i><strong>  Produção</strong></h3>
+                    <p class="service-description" >
                         Caracterizados por criar produtos actuais, adaptados as novas tendências
                         do mercado, com o intuito claro de proporcionar conforto, beleza e rigor.
                         Contando com uma equipa capaz de trazer para todos, produtos de qualidade 
                         e com preços irresistíveis.
                     </p>
+                    <button onclick="toggleDescription(this)">▼</button>
                 </li>
-                <li class="item-service">
-                    <h3><strong>Montagem de Cozinhas</strong></h3>
-                    <p>
+                <li class="item-service" data-aos="fade-up">
+                    <h3><i class="fas fa-utensils"></i><strong>  Montagem de Cozinhas</strong></h3>
+                    <p class="service-description">
                         Abrangindo a montagem de de cozinhas, proporcionamos para sí ambientes 
                         favoráveis e aconchegantes para confeccionar suas refeições, garantindo 
                         a durabilidade da sua cozinha com o nosso material de qualidade. 
                     </p>
+                    <button onclick="toggleDescription(this)">▼</button>
                 </li>
-                <li class="item-service">
-                    <h3><strong>Montagem de Escritórios</strong></h3>
-                    <p>
+                <li class="item-service" data-aos="fade-up">
+                    <h3><i class="fas fa-briefcase"></i><strong>  Montagem de Escritórios</strong></h3>
+                    <p class="service-description">
                         Permita-nos proporcionar um ambiente bonito e ameno para o 
                         seu escritório, trazendo a certeza de um grande aumento da
                         sua produtividade e qualidade de trabalho.
                     </p>
+                    <button onclick="toggleDescription(this)">▼</button>
                 </li>
             </ul>
 
@@ -203,7 +233,6 @@
 
         <section id="videoDemo" class="videoDemo">
 
-            <h2>Como trabalhamos?</h2>
 
             <video controls>
 
@@ -212,6 +241,31 @@
                 Your browser don't support this video.
 
             </video>
+
+        </section>
+
+        <section class="localizacao">
+
+            <h2> Nossa Localização</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15417.223796572996!2d13.440167675739463!3d-14.975712258905103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ba34bbf33d40d4b%3A0xc127c6de22ebdf60!2sFam%C3%ADlia%20Falanga!5e0!3m2!1sen!2sao!4v1736103092490!5m2!1sen!2sao" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            </iframe>
+
+        </section>
+
+        <section id="parceiros" class="parceiros">
+
+            <h2> Nossos Parceiros</h2>
+
+            <div class="parceiros-container">
+
+                <img src="assets/images/worldVision.jfif" alt="worldVision">
+                <img src="assets/images/sonangol.jfif" alt="sonangol">
+                <img src="assets/images/unitel.jfif" alt="unitel">
+
+            </div>
 
         </section>
 
@@ -261,7 +315,10 @@
 
     </a>
     
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     
 </body>
 </html>

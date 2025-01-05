@@ -13,11 +13,11 @@ html, body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
     color: black;
-    background-color: #e9e5e4;
+    background-color: #ffffff;
 }
 
 header, main, footer{
-    padding: 20px;
+    padding: 10px;
 }
 
 .container-menu{
@@ -46,6 +46,7 @@ header, main, footer{
     font-size: 14px;
     font-weight: bold;
     display: block;
+    color: white;
 }
 
 .menu ul{
@@ -84,7 +85,7 @@ header, main, footer{
 .menuResponsivo span{
     height: 3px;
     width: 25px;
-    background-color: #000;
+    background-color: white;
     margin: 4px 0;
     border-radius: 5px;
 }
@@ -95,8 +96,41 @@ header, main, footer{
     background-image: url(assets/images/IMG-20241228-WA0014.jpg);
     background-size: cover;
     color: #cf3709;
+    font-weight: bolder;
+    text-transform: uppercase;
+    
 
     height: max-content;
+}
+
+.textoReflexao{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d1b47;
+    color: #ffffff;
+   
+}
+
+.texto blockquote{
+   
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: justify;
+    padding: 10px;
+    margin-left: 25px;
+
+}
+
+.autor{
+
+    font-size: 18px;
+    margin: auto;
+   
+
 }
 
 .carrossel{
@@ -110,12 +144,13 @@ header, main, footer{
     margin:auto;
     overflow: hidden;
     border-radius: 8px;
-    background-color: white;
+    background-color: #cf3709;
+    
 }
 
 .carrossel h2{
     text-align: center;
-    color: #cf3709;
+    color: white;
     padding: 10px;
 }
 
@@ -123,6 +158,7 @@ header, main, footer{
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
+   
 }
 
 .carrossel-item{
@@ -164,8 +200,8 @@ header, main, footer{
     flex-flow: row ;
     justify-content: space-evenly;
     width: 100%;
-    background-color: #f4f4f4;
-    color: black;
+    background-color: #0d1b47;
+    color: white;
     padding: 10px;
  
 }
@@ -199,7 +235,7 @@ header, main, footer{
 
 .image h2{
     text-align: center;
-    color: #cf3709;
+    color: white;
 }
 
 .servicos{
@@ -229,17 +265,26 @@ header, main, footer{
 
 .item-service{
     background: transparent;
-    background-color: #f4f1f1;
+    background-color: #fffdfd;
     padding: 15px;
     border-radius: 30px;
-    box-shadow: 5px 8px 2px #cf3709;
+    box-shadow: 5px 8px 2px #f17c58;
     transition: .3s;
-    cursor: pointer;
-    
+    opacity: 0;
+    /*animation: fadeUp 1s ease-in-out forwards;*/
+    position: relative;
 }
 
-.item-service p{
+
+.item-service .service-description {
+    display: none;
+    margin-top: 10px;
     text-align: justify;
+}
+
+.item-service h3,
+.item-service i{
+    color: #0d1b47;
 }
 
 .servicos ul li{
@@ -248,9 +293,31 @@ header, main, footer{
 
 }
 
+.item-service .toggle-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 5px;
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .videoDemo{
     text-align: center;
     padding: 20px;
+    background-color: #cf3709;
 }
 
 .videoDemo h2{
@@ -261,6 +328,59 @@ header, main, footer{
 .videoDemo video{
     max-width: 100%;
     height: auto;
+}
+
+.localizacao{
+    padding: 20px;
+    background-color: #0d1b47;
+}
+
+.localizacao h2{
+    text-align: center;
+    color: white;
+}
+
+.localizacao iframe{
+    max-width: 100%;
+
+}
+
+.parceiros{
+    text-align: center;
+    color: #f9f9f9;
+    background-color: #cf3709;
+}
+
+.parceiros-container{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.parceiros-container img{
+    width: 20%;
+    flex-shrink: 0;
+    animation: scroollLeft 3s linear infinite;
+    padding: 20px;
+    margin: 10px;
+    border: 3px solid #f8f5f4;
+    border-radius: 50px;
+   
+    
+}
+
+@keyframes scroollLeft {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
 }
 
 .contactos{
@@ -297,7 +417,7 @@ header, main, footer{
 
 .contactos form button{
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #cf3709;
     color: white;
     border: none;
     border-radius: 10px;
@@ -312,7 +432,7 @@ header, main, footer{
 footer{
 
     text-align: center;
-    background-color: black;
+    background-color:#0d1b47;
     padding: 10px;
     color: white;
 }
@@ -341,6 +461,7 @@ footer{
 }
 /* Responsive styles */
 @media (max-width: 768px) {
+
     .container-menu {
         flex-direction: column;
         align-items: flex-start;
@@ -365,15 +486,21 @@ footer{
     .logo img {
         max-width: 80px;
     }
-    
-    .menuResponsivo{
 
+    .texto{
+      margin-right: 50px;
     }
+    .autor{
+        margin-left: 150px;
+        margin-bottom: 8px;
+    }
+    
     
     #sobre{
         flex-flow: column;
         align-items: center;
     }
+
     #sobre .historial,
     .image{
         width: 100%;
@@ -391,6 +518,15 @@ footer{
         margin: 10px 0;
     }
 
+    .item-service {
+        animation-duration: 1.5s;
+        width: 100%;
+    }
+
+    .parceiros-container img {
+        width: 60%;
+    }
+
     .contactos form input, .contactos form textarea {
         font-size: 14px;
     }
@@ -400,6 +536,7 @@ footer{
 }
 
 @media (max-width: 480px) {
+
     .container-menu {
         padding: 5px;
     }
@@ -410,6 +547,14 @@ footer{
 
     .logo img {
         max-width: 60px;
+    }
+
+    .texto{
+        margin-right: 50px;
+    }
+    .autor{
+        margin-left: 150px;
+        margin-bottom: 8px;
     }
 
     #sobre{
@@ -425,6 +570,7 @@ footer{
     .servicos{
        padding: 10px;
     }
+
     .item-service{
         padding: 10px;
     }
@@ -432,6 +578,11 @@ footer{
     .servicos ul li {
         font-size: 12px;
     }
+
+    .parceiros-container img {
+        width: 60%;
+    }
+
     .contactos form input, .contactos form textarea {
         font-size: 12px;
     }
@@ -440,3 +591,8 @@ footer{
         font-size: 12px;
     }
 }
+
+
+
+
+
